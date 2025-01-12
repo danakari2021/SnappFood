@@ -1,0 +1,219 @@
+body {
+    font-family: "IRANSans";
+    direction: rtl;
+
+    &::-webkit-scrollbar {
+       width: 10px !important;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: $gray;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $gray-500;
+        border-radius: 20px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: $gray-100;
+        border-radius: 5px;
+      }
+}
+
+.container {
+    @media (max-width: 375px) {
+        width: 100% !important;
+    }
+}
+
+.relative {
+    position: relative;
+
+    &:hover .img-thumbnail {
+        transition: all 200ms ease-in-out 0s;
+        box-shadow: rgba(58, 61, 66, 0.06) 0px 1px 0px, rgba(0, 0, 0, 0.3) 0px 8px 32px -26px;
+    }
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    width: 80px;
+    height: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    @include fontSize($fontsize: 0.9rem);
+    text-decoration: none;
+    list-style: none;
+    color: $gray-500;
+    cursor: pointer;
+
+    &:hover {
+        color: $gray-500;
+    }
+}
+
+.btn-hover:hover {
+    @include hover-btn;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+.w-40 {
+    width: 40% !important;
+}
+
+p {
+    @include fontSize($fontsize: 0.9rem);
+    color: $gray-100 !important;
+}
+
+.header-title {
+    z-index: 1;
+
+    @media (max-width:768px) {
+        padding: 0px !important;
+    }
+
+    .login {
+        z-index: 1;
+    }
+}
+
+.header-search {
+    margin-top: 100px !important;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width:768px) {
+        margin-top: 20px !important;
+    }
+
+    @media (max-width:425px) {
+        padding: 0 !important;
+    }
+
+    .title {
+
+        @media (max-width:425px) {
+            @include fontSize($fontsize: 1.5rem);
+        }
+    }
+}
+
+.download {
+    overflow: visible !important;
+    margin-top: 200px !important;
+    background-color: #EBEDF0 !important;
+    height: max-content !important;
+
+    @media (max-width:425px) {
+        margin-top: 100px !important;
+
+    }
+}
+
+.download-app {
+    width: 66%;
+  
+    @media (max-width: 991px) {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .size {
+      @include fontSize($fontsize: 1rem);
+      line-height: 2;
+    }
+  
+    padding: 0 120px;
+  
+    .download-link-mobil {
+      @include border-radius($border-radius: 5px);
+      width: 300px;
+      box-shadow: rgba(58, 61, 66, 0.2) 0px 0px 4px 0px;
+  
+      @media (max-width: 375px) {
+        width: 290px;
+      }
+    }
+  
+    .download-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  }
+  
+  .download-img {
+    position: absolute;
+    left: 3.4375rem;
+    transform: translateY(-21%);
+  
+    img {
+      width: 400px;
+    }
+  }
+  
+  .dar-shar {
+    border-top: 0.1rem solid $gray-100;
+  
+    .dar-shar-header {
+      h4 {
+        @include fontSize($fontsize: 1rem);
+        font-weight: bold;
+      }
+    }
+  
+    .shahr {
+      p {
+        @include fontSize($fontsize: 0.7rem);
+        flex-flow: row;
+      }
+    }
+  }
+
+.job {
+    @include border-radius($border-radius: 20px !important);
+    overflow: visible !important;
+    background-color: $bg-header-kasbokar-footer !important;
+
+    .download-app {
+        padding: 0 30px;
+    }
+
+    button {
+        @include fontSize($fontsize: 1.1rem);
+    }
+}
+
+input {
+    width: 58%;
+    outline: none;
+
+    @media (max-width: 375px) {
+        width: 55%;
+    }
+}
+
+footer {
+    background-color: $bg-header-kasbokar-footer;
+
+    .container {
+        @media (max-width: 992px) {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$bg-header-kasbokar-footer: #F9FAFB;
+$pink: #FF00A6;
+$gray: #3A3D42;
+$gray-500: #61646A;
+$gray-100: #C9CACB;
+
+@font-face {
+    font-family: "IRANSans";
+    src: url(../font/IRANSans.ttf);
+}
+
+@mixin fontSize($fontsize: 1rem) {
+    font-size: $fontsize;
+}
+
+@mixin hover-btn {
+    transition: all 0.5s;
+    opacity: 0.9;
+}
+
+@mixin border-radius($border-radius: 50%) {
+    border-radius: $border-radius;
+}
